@@ -12,7 +12,7 @@ public class HelloController {
     public ModelAndView index(){
         logger.info("hello ttt");
         ModelAndView mv = new ModelAndView();
-        mv.addObject("url", "ttttttttttttttt");
+        mv.addObject("url",  null);
         mv.setViewName("index");
         return mv;
     }

@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
     @Override
     public int addUser(User user) {
         return userMapper.insert(user);
@@ -24,4 +25,12 @@ public class UserServiceImpl implements UserService {
         PageHelper.startPage(pageNum, pageSize);
         return userMapper.selectAllUser();
     }
+
+    @Override
+    public User findUser(String username, String password) {
+        userMapper.
+        return null;
+    }
+
+
 }
