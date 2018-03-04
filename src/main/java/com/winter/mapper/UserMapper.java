@@ -20,4 +20,5 @@ public interface UserMapper {
 
     List<User> selectAllUser();
     User findUserByUserNamePWD(@Param("username")String username, @Param("password") String password);
+    User findUserByUserId(@Param("userId") Integer userId);
 }

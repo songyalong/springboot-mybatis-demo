@@ -1,15 +1,22 @@
 package com.winter.model;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.io.Serializable;
 
 public class User implements Serializable{
     private static final long serialVersionUID = 617015554825889102L;
+
+    @NotBlank
     private Integer userId;
 
+    @NotBlank
     private String userName;
 
     private String password;
 
+    @Length(min = 11, max = 11, message = "输入手机号长度错误")
     private String phone;
 
     public Integer getUserId() {
@@ -43,4 +50,7 @@ public class User implements Serializable{
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
+
+
+
 }

@@ -31,5 +31,10 @@ public class UserServiceImpl implements UserService {
          return userMapper.findUserByUserNamePWD(username, password);
     }
 
+    @Override
+    public User findUserById(Integer userId) {
+        return userMapper.selectByPrimaryKey(userId);
+    }
+
 
 }
