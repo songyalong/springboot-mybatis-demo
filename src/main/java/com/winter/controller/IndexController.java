@@ -34,7 +34,8 @@ public class IndexController {
      */
     @RequestMapping(value = "/index/", method = RequestMethod.GET)
     public ModelAndView index(){
-        ModelAndView mv = new ModelAndView("index");
+//        ModelAndView mv = new ModelAndView("index");
+        ModelAndView mv = new ModelAndView("websocket");
         return mv;
     }
 }
